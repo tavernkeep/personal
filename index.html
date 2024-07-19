@@ -1,11 +1,19 @@
 <html>
   <head>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+       function calculateExp() {
+         var ageDifMs = Date.now() - new Date('2014-01-01');
+         var ageDate = new Date(ageDifMs); // miliseconds from epoch
+         return Math.abs(ageDate.getUTCFullYear() - 1970);
+       }
+    </script>
   </head>
   <body>
     <div class='flex h-full w-full bg-slate-300'>
       <div class='flex p-4'>
         <h1 class='text-3xl font-bold'>Hi, I'm Max 👋</h1>
+        <h3>{calculateExp()}</h3>
       </div>
     </div>
   </body>
